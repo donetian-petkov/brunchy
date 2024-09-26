@@ -21,7 +21,7 @@ export const MenuList = () => {
     }, [])
 
     return (
-        <div style={{display: "flex", flexDirection: "row"}}>
+        <div className={styles.productList}>
             {
 
                 <Swiper
@@ -49,13 +49,14 @@ export const MenuList = () => {
                 >
                         {
                             menuItems.map((item) => {
-                                return <SwiperSlide className={styles.product} key={item.name}>
+                                return <SwiperSlide key={item.name}>
+                                    <img className={styles.productImg} src={`/images/${item.image}`} alt={item.name}/>
                                     <MenuItem key={item.name} item={item}/>
                                 </SwiperSlide>
                             })
                         }
 
-                    </Swiper>
+                </Swiper>
             }
         </div>
     )
