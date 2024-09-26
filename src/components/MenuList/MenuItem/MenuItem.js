@@ -7,7 +7,7 @@ export const MenuItem = ({item}) => {
             <div className={styles.productDescr}>
                 <h2>{item.name}</h2>
                 <h3>{item.caption}</h3>
-                <h4>$ {item.price}</h4>
+                <h4><span>$</span> {item.price}</h4>
             </div>
             <button className={styles.productBasket}>
                 <img src='/images/basket.png' alt="basket"/>
