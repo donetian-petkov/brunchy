@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.scss';
-import {Hero, Main} from "./components/Hero/Hero";
+import {Hero} from "./components/Hero/Hero";
 import {Header} from "./components/Header/Header";
 import {MenuList} from "./components/MenuList/MenuList";
 import {Cart} from "./components/Cart/Cart";
