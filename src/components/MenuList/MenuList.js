@@ -26,10 +26,7 @@ export const MenuList = () => {
 
                 <Swiper
                     slidesPerView={1}
-                    spaceBetween={5}
-                    pagination={{
-                        clickable: true,
-                    }}
+                    spaceBetween={100}
                     breakpoints={{
                         640: {
                             slidesPerView: 2,
@@ -44,7 +41,6 @@ export const MenuList = () => {
                             spaceBetween: 50,
                         },
                     }}
-                    modules={[Pagination]}
                     className="mySwiper"
                 >
                         {

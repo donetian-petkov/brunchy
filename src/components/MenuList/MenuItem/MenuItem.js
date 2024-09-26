@@ -6,10 +6,12 @@ export const MenuItem = ({item}) => {
         <div className={styles.product}>
             <div className={styles.productDescr}>
                 <h2>{item.name}</h2>
-                <p>{item.caption}</p>
-                <p>$ {item.price}</p>
+                <h3>{item.caption}</h3>
+                <h4>$ {item.price}</h4>
             </div>
-            <img src='/images/basket.png' alt="basket"/>
+            <button className={styles.productBasket}>
+                <img src='/images/basket.png' alt="basket"/>
+            </button>
         </div>
     )
 }
