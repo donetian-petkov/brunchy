@@ -1,12 +1,17 @@
+import styles from './MenuItem.module.sass';
+
 export const MenuItem = ({item}) => {
 
     return (
-        <div>
-            <img src={`/images/${item.image}.png`} alt={item.name}/>
-            <h2>{item.name}</h2>
-            <p>{item.caption}</p>
-            <p>$ {item.price}</p>
-            <img src='/images/basket.png' alt="basket"/>
+        <div className={styles.product}>
+            <div className={styles.productDescr}>
+                <h2>{item.name}</h2>
+                <h3>{item.caption}</h3>
+                <h4><span>$</span> {item.price}</h4>
+            </div>
+            <button className={styles.productBasket}>
+                <img src='/images/basket.png' alt="basket"/>
+            </button>
         </div>
     )
 }
