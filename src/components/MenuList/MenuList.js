@@ -1,10 +1,10 @@
 import {MenuItem} from "./MenuItem/MenuItem";
 import {useEffect, useState} from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css'; // Swiper core styles
 import 'swiper/css/navigation'; // Navigation module styles (if used)
 import 'swiper/css/pagination';
-import {Autoplay, HashNavigation, Navigation, Pagination} from "swiper/modules"; // Pagination module styles (if used)
+import {Autoplay, HashNavigation, Mousewheel, Navigation, Pagination} from "swiper/modules"; // Pagination module styles (if used)
 import styles from './MenuList.module.sass';
 
 export const MenuList = () => {
@@ -41,16 +41,19 @@ export const MenuList = () => {
                             spaceBetween: 50,
                         },
                     }}
+                    mousewheel={true}
+                    modules={[Mousewheel]}
+                    grabCursor={true}
                     className="mySwiper"
                 >
-                        {
-                            menuItems.map((item) => {
-                                return <SwiperSlide key={item.name}>
-                                    <img className={styles.productImg} src={`/images/${item.image}`} alt={item.name}/>
-                                    <MenuItem key={item.name} item={item}/>
-                                </SwiperSlide>
-                            })
-                        }
+                    {
+                        menuItems.map((item) => {
+                            return <SwiperSlide key={item.name}>
+                                <img className={styles.productImg} src={`/images/${item.image}`} alt={item.name}/>
+                                <MenuItem key={item.name} item={item}/>
+                            </SwiperSlide>
+                        })
+                    }
 
                 </Swiper>
             }
