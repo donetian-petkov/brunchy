@@ -12,16 +12,29 @@ function App() {
 
     const [cart, setCart] = useState([]);
     const [isCheckout, setIsCheckout] = useState(false);
+    const [isOrdered, setIsOrdered] = useState(false);
 
     return (
         <div className="App">
-            <CheckoutProcess isCheckout={isCheckout} setIsCheckout={setIsCheckout}>
+            <CheckoutProcess
+                isCheckout={isCheckout}
+                setIsCheckout={setIsCheckout}
+                setIsOrdered={setIsOrdered}
+            >
                 <Header/>
                 <Hero/>
-                <MenuList setCart={setCart}/>
+                <MenuList setCart={setCart}
+                />
             </CheckoutProcess>
-            <Cart cart={cart} setIsCheckout={setIsCheckout}/>
-            {isCheckout && <Checkout cart={cart}/>}
+            <Cart
+                  isCheckout={isCheckout}
+                  cart={cart}
+                  setIsCheckout={setIsCheckout}
+                  setCart={setCart}
+                  isOrdered={isOrdered}
+                  setIsOrdered={setIsOrdered}
+            />
+
         </div>
     );
 }

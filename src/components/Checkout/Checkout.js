@@ -1,21 +1,33 @@
-import style from './Checkout.module.css';
+import styles from './Checkout.module.css';
+import {Basket} from "./Basket/Basket";
+import {OrderConfirmation} from "./OrderConfirmation/OrderConfirmation";
 
 export const Checkout = (
     {
-        cart
+        cart,
+        isOrdered,
+        setIsOrdered,
+        setIsCheckout
     }
 ) => {
+
+    const completeOrder = () => {
+        setIsOrdered(false);
+        setIsCheckout(false);
+    }
+
+    const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
+
     return (
-        <div className={style.checkout}>
-            {
-                cart && cart.map(item => {
-                    return (
-                        <p>{item.name} {item.price}</p>
-                    )
-                })
+        <div className={styles.checkout}>
+
+            {!isOrdered &&
+               <Basket cart={cart} totalPrice={totalPrice}/>
             }
-            <hr/>
-            <h2>Total: {cart.reduce((acc, item) => acc + item.price, 0)}</h2>
+
+            {
+                isOrdered && <OrderConfirmation completeOrder={completeOrder}/>
+            }
         </div>
     );
 }
