@@ -7,7 +7,9 @@ import 'swiper/css/pagination';
 import {Autoplay, HashNavigation, Mousewheel, Navigation, Pagination} from "swiper/modules"; // Pagination module styles (if used)
 import styles from './MenuList.module.sass';
 
-export const MenuList = () => {
+export const MenuList = (
+    {setCart}
+) => {
 
     const [menuItems, setMenuItems] = useState([]);
 
@@ -22,11 +24,9 @@ export const MenuList = () => {
 
     return (
         <div className={styles.productList}>
-            {
-
                 <Swiper
                     slidesPerView={1}
-                    spaceBetween={100}
+                    spaceBetween={150}
                     breakpoints={{
                         640: {
                             slidesPerView: 2,
@@ -50,13 +50,12 @@ export const MenuList = () => {
                         menuItems.map((item) => {
                             return <SwiperSlide key={item.name}>
                                 <img className={styles.productImg} src={`/images/${item.image}`} alt={item.name}/>
-                                <MenuItem key={item.name} item={item}/>
+                                <MenuItem key={item.name} item={item} setCart={setCart}/>
                             </SwiperSlide>
                         })
                     }
 
                 </Swiper>
-            }
         </div>
     )
 }
