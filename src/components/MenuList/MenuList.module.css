@@ -5,7 +5,10 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.productList .productImg {
+.productList .productSlide {
+  position: relative;
+}
+.productList .productSlide .productImg {
   position: absolute;
   max-width: 192.48px;
   max-height: 120px;
