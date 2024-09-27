@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+}
+.header h1 {
+  width: 342px;
+  height: 64px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 65px;
+}
+.header .headerMenu {
+  width: 341px;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .headerMenu a {
+  text-decoration: none;
+  color: inherit;
+}
+.header .headerMenu h2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 65px;
+  color: #797979;
+}
+.header .headerMenu img {
+  width: 184px;
+  height: 55px;
+}
+
+/*# sourceMappingURL=Header.module.css.map */

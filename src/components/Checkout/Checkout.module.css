@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+.checkout {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: #F9F6F6;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 1px;
+}
+
+/*# sourceMappingURL=Checkout.module.css.map */

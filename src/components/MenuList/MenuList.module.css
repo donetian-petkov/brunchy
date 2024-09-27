@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+.productList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.productList .productImg {
+  position: absolute;
+  max-width: 192.48px;
+  max-height: 120px;
+  top: 0;
+  right: 0;
+  height: auto;
+}
+
+/*# sourceMappingURL=MenuList.module.css.map */
