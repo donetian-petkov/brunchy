@@ -1,4 +1,6 @@
-$font-stack: 'Poppins';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+$font-stack: 'Poppins', sans-serif;
 $primary-font-color: #363636;
 $secondary-font-color: #797979;
 $primary-bg-color: #F9F6F6;
