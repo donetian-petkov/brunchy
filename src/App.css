@@ -1,6 +1,6 @@
-.App {
-  text-align: center;
-  font-family: "Poppins";
+.blurred {
+  filter: blur(4px);
+  transition: filter 0.5s;
 }
 
 /*# sourceMappingURL=App.css.map */
