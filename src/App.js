@@ -6,7 +6,7 @@ import {MenuList} from "./components/MenuList/MenuList";
 import {Cart} from "./components/Cart/Cart";
 import {useState} from "react";
 import {Checkout} from "./components/Checkout/Checkout";
-import {CheckoutProcess} from "./hoc/CheckoutProcess";
+import {WithBlurEffect, withBlurEffect} from "./hoc/WithBlurEffect";
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
 
     return (
         <div className="App">
-            <CheckoutProcess
+            <WithBlurEffect
                 isCheckout={isCheckout}
                 setIsCheckout={setIsCheckout}
                 setIsOrdered={setIsOrdered}
@@ -25,7 +25,7 @@ function App() {
                 <Hero/>
                 <MenuList setCart={setCart}
                 />
-            </CheckoutProcess>
+            </WithBlurEffect>
             <Cart
                   isCheckout={isCheckout}
                   cart={cart}

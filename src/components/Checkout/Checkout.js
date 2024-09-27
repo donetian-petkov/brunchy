@@ -21,8 +21,8 @@ export const Checkout = (
     return (
         <div className={styles.checkout}>
 
-            {!isOrdered &&
-               <Basket cart={cart} totalPrice={totalPrice}/>
+            {
+                !isOrdered && <Basket cart={cart} totalPrice={totalPrice}/>
             }
 
             {

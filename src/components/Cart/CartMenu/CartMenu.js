@@ -11,12 +11,12 @@ export const CartMenu = (
     const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
 
     return (
-        <>
+        <div className={styles.cartMenu}>
             <button onClick={() => setIsCheckout(true)}>
                 <img src='/images/basket.png' alt="basket"/>
             </button>
             <h1>${totalPrice.toFixed(2)}</h1>
             <button className={styles.orderButton} onClick={order}>Order Now</button>
-        </>
+        </div>
     );
 }
