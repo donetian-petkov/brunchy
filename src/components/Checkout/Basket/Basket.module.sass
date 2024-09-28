@@ -1,9 +1,10 @@
 @import "../../../styles/variables"
+@import "../../../styles/mixins"
 
 .basket
-  padding: 50px
+  padding: 10px
   width: 534px
-  height: 370px
+  height: auto
   font-weight: 700
   line-height: 65px
   text-align: left
@@ -27,3 +28,8 @@
       text-align: left
     span
       color: $secondary-bg-color
+
+
+@include respond-to(phone)
+  .basket
+    width: 353px
