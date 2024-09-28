@@ -31,7 +31,7 @@ export const MenuList = (
                         250: {
                             slidesPerView: 1,
                         },
-                        430: {
+                        400: {
                             slidesPerView: 2,
                         },
                         544: {
