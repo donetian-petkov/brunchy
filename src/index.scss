@@ -1,12 +1,27 @@
 @import 'styles/variables';
+@import 'styles/mixins';
 
 body {
-  text-align: center;
+
   font-family: $font-stack;
   align-items: center;
-  width: 1440px;
-  height: 1024px;
   margin: 0 auto;
+  text-align: center;
+
+
+  @include respond-to(desktop) {
+    width: 85%;
+  }
+
+  @include respond-to(tablet) {
+    width: 90%;
+  }
+
+  @include respond-to(phone) {
+    width: 100%;
+  }
+
+
   overflow: visible;
   position: relative;
 

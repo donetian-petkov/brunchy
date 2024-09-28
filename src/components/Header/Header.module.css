@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   text-align: left;
+  align-items: center;
 }
 .header h1 {
   width: 342px;

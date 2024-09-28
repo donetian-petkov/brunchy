@@ -1,0 +1,13 @@
+@import 'variables';
+
+@mixin respond-to($device) {
+  @if $device == desktop {
+    @media (min-width: $desktop) { @content; }
+  }
+  @else if $device == tablet {
+    @media (max-width: $desktop) and (min-width: $tablet) { @content; }
+  }
+  @else if $device == phone {
+    @media (max-width: $tablet) { @content; }
+  }
+}

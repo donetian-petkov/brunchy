@@ -4,7 +4,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css'; // Swiper core styles
 import 'swiper/css/navigation'; // Navigation module styles (if used)
 import 'swiper/css/pagination';
-import {Autoplay, HashNavigation, Mousewheel, Navigation, Pagination} from "swiper/modules"; // Pagination module styles (if used)
+import {Mousewheel} from "swiper/modules"; // Pagination module styles (if used)
 import styles from './MenuList.module.sass';
 
 export const MenuList = (
@@ -26,19 +26,21 @@ export const MenuList = (
         <div className={styles.productList}>
                 <Swiper
                     slidesPerView={1}
-                    spaceBetween={150}
                     breakpoints={{
-                        640: {
+                        430: {
                             slidesPerView: 2,
-                            spaceBetween: 20,
                         },
-                        768: {
-                            slidesPerView: 4,
-                            spaceBetween: 40,
+                        767: {
+                            slidesPerView: 3,
                         },
                         1024: {
+                            slidesPerView: 3,
+                        },
+                        1246: {
+                            slidesPerView: 4,
+                        },
+                        1440: {
                             slidesPerView: 5,
-                            spaceBetween: 50,
                         },
                     }}
                     mousewheel={true}
@@ -48,8 +50,7 @@ export const MenuList = (
                 >
                     {
                         menuItems.map((item) => {
-                            return <SwiperSlide key={item.name}>
-                                <img className={styles.productImg} src={`/images/${item.image}`} alt={item.name}/>
+                            return <SwiperSlide key={item.name} className={styles.productSlide}>
                                 <MenuItem key={item.name} item={item} setCart={setCart}/>
                             </SwiperSlide>
                         })

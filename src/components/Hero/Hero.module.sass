@@ -1,18 +1,33 @@
 @import '../../styles/variables'
+@import '../../styles/mixins'
 
 .hero
   position: relative
-  text-align: left
+  @include respond-to(tablet)
+   display: flex
+   justify-content: center
+   text-align: center
+   margin: 0 auto
+   flex-direction: column
+   width: 571px
+   height: 272px
+  @include respond-to(desktop)
+   text-align: left
+   width: 512px
+   height: 331px
   h1
-    width: 480px
-    height: 249px
-    left: 140px
-    top: 145px
-    font-size: 64px
-    font-weight: 700
-    line-height: 65px
-    span
-      color: $secondary-bg-color
+   width: 480px
+   font-size: 59px
+   font-weight: 700
+   line-height: 65px
+   @include respond-to(tablet)
+      margin: 0 auto
+   @include respond-to(desktop)
+      font-size: 64px
+      left: 140px
+      top: 145px
+  span
+    color: $secondary-bg-color
   h2
    font-size: 16px
    font-weight: 400

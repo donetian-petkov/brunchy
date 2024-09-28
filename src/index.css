@@ -1,15 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 body {
-  text-align: center;
   font-family: "Poppins", sans-serif;
   align-items: center;
-  width: 1440px;
-  height: 1024px;
   margin: 0 auto;
+  text-align: center;
   overflow: visible;
   position: relative;
   background: #FFFFFF;
   border-radius: 30px;
+}
+@media (min-width: 1024px) {
+  body {
+    width: 85%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 767px) {
+  body {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
