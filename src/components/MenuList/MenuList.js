@@ -26,8 +26,15 @@ export const MenuList = (
         <div className={styles.productList}>
                 <Swiper
                     slidesPerView={1}
+                    spaceBetween={150}
                     breakpoints={{
+                        250: {
+                            slidesPerView: 1,
+                        },
                         430: {
+                            slidesPerView: 2,
+                        },
+                        544: {
                             slidesPerView: 2,
                         },
                         767: {
@@ -41,6 +48,7 @@ export const MenuList = (
                         },
                         1440: {
                             slidesPerView: 5,
+                            spaceBetween: 0
                         },
                     }}
                     mousewheel={true}

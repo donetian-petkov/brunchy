@@ -15,12 +15,12 @@ body {
     width: 85%;
   }
 }
-@media (max-width: 1024px) and (min-width: 767px) {
+@media (max-width: 1024px) and (min-width: 534px) {
   body {
     width: 90%;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 534px) {
   body {
     width: 100%;
   }

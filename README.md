@@ -1,70 +1,131 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Brunchy - A Simple Delivery App
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+**Brunchy** is a single-page application that allows users to order their favorite brunch meals. The application offers a seamless user experience where users can:
+- Browse available brunch options.
+- Add meals to a basket.
+- Review their order list.
+- Place an order.
 
-### `npm start`
+The project is built using **Create React App (CRA)** and follows best practices for building React applications. It uses modern UI design and CSS for styling.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Add items to the basket**: Users can browse through a list of available brunch items and add them to their basket.
+- **Review and manage orders**: View the items in the basket with their prices
+- **Place an order**: Submit the final order for delivery.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Follow the instructions below to set up and run the project locally.
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Make sure you have the following software installed:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Node.js** (version 14.x or later)
+- **npm** (version 6.x or later) or **yarn** (version 1.x or later)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. **Clone the repository:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone https://github.com/your-username/brunchy.git
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Navigate to the project directory:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   cd brunchy
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Install dependencies:**
 
-## Learn More
+   If you are using npm:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Or if you prefer using yarn:
 
-### Code Splitting
+   ```bash
+   yarn install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Running the Project
 
-### Analyzing the Bundle Size
+To run the application in development mode:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Use the following command to start the local development server:
 
-### Making a Progressive Web App
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   Or, if you are using yarn:
 
-### Advanced Configuration
+   ```bash
+   yarn start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view the app.
 
-### Deployment
+### Building the Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To create a production build of the application:
 
-### `npm run build` fails to minify
+1. Run the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   npm run build
+   ```
+
+   Or if you are using yarn:
+
+   ```bash
+   yarn build
+   ```
+
+2. The production-ready files will be generated in the `build` folder, ready to be deployed to a hosting service.
+
+### Project Structure
+
+Here's an overview of the project's file and folder structure:
+
+```
+brunchy/
+├── public/             # Public assets such as index.html
+├── src/                # Source files for the application
+│   ├── hoc/            # High-order components
+│   ├── components/     # Reusable UI components
+        ├── /Cart       # The cart component
+        ├── /Checkout   # The checkout component
+        ├── /Header     # The checkout component
+        ├── /Hero       # The hero component
+        ├── /Menu List  # The menu list component
+│   ├── styles/         # Global and component-specific styles
+│   ├── App.js          # Main application component
+│   ├── index.js        # Entry point for the application
+├── .gitignore          # List of files and directories ignored by git
+├── package.json        # Project configuration and dependencies
+├── README.md           # Project documentation (you are here!)
+└── yarn.lock / package-lock.json  # Dependency lock files
+```
+
+### Available Scripts
+
+In the project directory, you can run the following scripts:
+
+- **`npm start`** or **`yarn start`**: Runs the app in development mode.
+- **`npm run build`** or **`yarn build`**: Builds the app for production.
+
+### Technologies Used
+
+- **React.js**: A JavaScript library for building user interfaces.
+- **Create React App (CRA)**: A tool to set up a modern React application with no configuration.
+- **SASS**: A CSS preprocessor that adds power and elegance to the basic language.
+- **Swiper.js**: A modern touch slider library.
