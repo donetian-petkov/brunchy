@@ -49,7 +49,6 @@ export const MenuList = (
                     {
                         menuItems.map((item) => {
                             return <SwiperSlide key={item.name} className={styles.productSlide}>
-                                <img className={styles.productImg} src={`/images/${item.image}`} alt={item.name}/>
                                 <MenuItem key={item.name} item={item} setCart={setCart}/>
                             </SwiperSlide>
                         })

@@ -18,6 +18,7 @@ export const MenuItem = ({
 
     return (
         <div className={styles.product}>
+
             <div className={styles.productDescr}>
                 <h2>{item.name}</h2>
                 <h3>{item.caption}</h3>
@@ -26,6 +27,7 @@ export const MenuItem = ({
             <button onClick={addProduct} className={styles.productBasket}>
                 <img src='/images/basket.png' alt="basket"/>
             </button>
+            <img className={styles.productImg} src={`/images/${item.image}`} alt={item.name}/>
         </div>
     )
 }

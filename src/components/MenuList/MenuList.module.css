@@ -5,16 +5,5 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.productList .productSlide {
-  position: relative;
-}
-.productList .productSlide .productImg {
-  position: absolute;
-  max-width: 192.48px;
-  max-height: 120px;
-  top: 0;
-  right: 0;
-  height: auto;
-}
 
 /*# sourceMappingURL=MenuList.module.css.map */
