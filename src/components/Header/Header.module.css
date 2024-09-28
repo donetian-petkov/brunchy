@@ -36,10 +36,10 @@
   height: 55px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 534px) {
   .header {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
   }
   .header h1 {
     position: absolute;
@@ -67,7 +67,7 @@
     left: 230px;
   }
 }
-@media (max-width: 1024px) and (min-width: 767px) {
+@media (max-width: 1024px) and (min-width: 534px) {
   .header {
     display: flex;
     justify-content: center;
