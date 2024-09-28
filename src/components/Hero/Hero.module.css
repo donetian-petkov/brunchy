@@ -1,18 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 .hero {
   position: relative;
-  text-align: left;
+}
+@media (max-width: 1024px) and (min-width: 767px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 571px;
+    height: 272px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero {
+    text-align: left;
+    width: 512px;
+    height: 331px;
+  }
 }
 .hero h1 {
   width: 480px;
   height: 249px;
-  left: 140px;
-  top: 145px;
   font-size: 64px;
   font-weight: 700;
   line-height: 65px;
 }
-.hero h1 span {
+@media (max-width: 1024px) and (min-width: 767px) {
+  .hero h1 {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  .hero h1 {
+    left: 140px;
+    top: 145px;
+  }
+}
+.hero span {
   color: #FF8515;
 }
 .hero h2 {

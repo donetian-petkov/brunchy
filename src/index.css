@@ -10,17 +10,17 @@ body {
   background: #FFFFFF;
   border-radius: 30px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   body {
     width: 85%;
   }
 }
-@media (max-width: 1440px) and (min-width: 830px) {
+@media (max-width: 1024px) and (min-width: 767px) {
   body {
     width: 90%;
   }
 }
-@media (max-width: 830px) {
+@media (max-width: 767px) {
   body {
     width: 100%;
   }
